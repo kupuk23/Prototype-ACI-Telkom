@@ -151,7 +151,17 @@ class _ResultsPageState extends State<ResultsPage> {
                           Center(child: SelectableText('Name :  $name')),
                           FasetChart(fasetScore: stdScore),
                           SizedBox(
-                            height: 100,
+                            height: 60,
+                          ),
+                          Center(
+                            child: SelectableText(
+                              "Hasil Berdasarkan Domain",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600, fontSize: 20),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
                           ),
                           BarChart(dom: dom),
                           SizedBox(
