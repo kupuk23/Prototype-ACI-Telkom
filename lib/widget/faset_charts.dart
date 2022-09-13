@@ -37,7 +37,7 @@ class FasetChart extends StatelessWidget {
         num: 3,
       ),
       SizedBox(
-        height: 50,
+        height: 70,
       ),
       SelectableText(
         "Conscientiousness".toUpperCase(),
@@ -60,7 +60,7 @@ class FasetChart extends StatelessWidget {
         num: 6,
       ),
       SizedBox(
-        height: 50,
+        height: 70,
       ),
       SelectableText(
         "Emotional Stability".toUpperCase(),
@@ -83,7 +83,7 @@ class FasetChart extends StatelessWidget {
         num: 9,
       ),
       SizedBox(
-        height: 50,
+        height: 70,
       ),
       SelectableText(
         "Extraversion".toUpperCase(),
@@ -106,7 +106,7 @@ class FasetChart extends StatelessWidget {
         num: 12,
       ),
       SizedBox(
-        height: 50,
+        height: 70,
       ),
       SelectableText(
         "Open Mindedness".toUpperCase(),

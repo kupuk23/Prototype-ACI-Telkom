@@ -19,7 +19,9 @@ class DescriptionDomain extends StatelessWidget {
     String domHigh = "";
     String domMed = "";
     String domLow = "";
-
+    double header1Size = 20;
+    double header2Size = 16;
+    double textSize = 15;
     void DomText() {
       switch (number) {
         case 1:
@@ -92,7 +94,9 @@ class DescriptionDomain extends StatelessWidget {
                                   ? "$bullet Extraversion"
                                   : "$bullet Open Mindedness",
                   style: TextStyle(
-                      fontWeight: FontWeight.w600, fontStyle: FontStyle.italic),
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.italic,
+                      fontSize: header1Size),
                 ),
               ),
               SelectableText(
@@ -102,6 +106,7 @@ class DescriptionDomain extends StatelessWidget {
                         ? ": Sedang"
                         : ": Rendah",
                 style: TextStyle(
+                  fontSize: header1Size,
                   fontWeight: FontWeight.w600,
                 ),
               )
@@ -125,6 +130,7 @@ class DescriptionDomain extends StatelessWidget {
                           .replaceAll('Individu', name)
                           .replaceAll('individu', name),
               textAlign: TextAlign.justify,
+              style: TextStyle(fontSize: textSize),
             ),
           ),
           SizedBox(

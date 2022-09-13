@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, non_constant_identifier_names
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_`constr`uctors, non_constant_identifier_names, prefer_const_constructors
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:database_test/widget/barChart.dart';
@@ -90,7 +90,7 @@ class _ResultsPageState extends State<ResultsPage> {
             //height: MediaQuery.of(context).size.height * 3.7, // - 500,
             width: MediaQuery.of(context).size.width, //1920 - 500,
             child: StreamBuilder<QuerySnapshot>(
-                stream: db.collection('userCSV').snapshots(),
+                stream: db.collection('userCSV10').snapshots(),
                 builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
                   if (!snapshot.hasData) {
                     return Center(
@@ -161,7 +161,8 @@ class _ResultsPageState extends State<ResultsPage> {
                             padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
                             child: SelectableText(
                               "Deskripsi Hasil:",
-                              style: TextStyle(fontWeight: FontWeight.w800),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w800, fontSize: 20),
                             ),
                           ),
                           SizedBox(

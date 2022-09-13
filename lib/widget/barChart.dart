@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +16,11 @@ class BarChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      BarChartCategories(),
+      const BarChartCategories(),
       Center(
-        child: SizedBox(
+        child: Container(
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 45),
+          //color: Colors.red,
           width: 500,
           height: 365,
           // MediaQuery.of(context).size.width *
@@ -26,18 +30,18 @@ class BarChart extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: const [
               SizedBox(
-                width: 246,
+                width: 232,
               ),
               DottedLine(
                 direction: Axis.vertical,
-                lineLength: 335,
+                lineLength: 300,
               ),
               SizedBox(
-                width: 150,
+                width: 180,
               ),
               DottedLine(
                 direction: Axis.vertical,
-                lineLength: 335,
+                lineLength: 300,
               ),
             ],
           ),
@@ -45,7 +49,7 @@ class BarChart extends StatelessWidget {
       ),
       Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           BarChartRow(values: dom[0], num: 1),
@@ -53,9 +57,85 @@ class BarChart extends StatelessWidget {
           BarChartRow(values: dom[2], num: 3),
           BarChartRow(values: dom[3], num: 4),
           BarChartRow(values: dom[4], num: 5),
+          SizedBox(
+            height: 30,
+          ),
+          Center(
+            child: Container(
+              height: 50,
+              width: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                //color: Color.fromARGB(50, 149, 149, 149),
+              ),
+              child: Legend(),
+            ),
+          )
         ],
       ),
     ]);
+  }
+}
+
+class Legend extends StatelessWidget {
+  const Legend({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        BoxLegend(scoreLevel: 0),
+        SizedBox(
+          width: 10,
+        ),
+        Text("Low"),
+        SizedBox(
+          width: 30,
+        ),
+        BoxLegend(scoreLevel: 1),
+        SizedBox(
+          width: 10,
+        ),
+        Text("Medium"),
+        SizedBox(
+          width: 30,
+        ),
+        BoxLegend(scoreLevel: 2),
+        SizedBox(
+          width: 10,
+        ),
+        Text("High"),
+      ],
+    );
+  }
+}
+
+class BoxLegend extends StatelessWidget {
+  const BoxLegend({
+    Key? key,
+    required int scoreLevel,
+  })  : _scoreLevel = scoreLevel,
+        super(key: key);
+
+  final int _scoreLevel;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(3),
+        color: _scoreLevel == 0
+            ? Colors.red
+            : _scoreLevel == 1
+                ? Colors.yellow
+                : Colors.green,
+      ),
+      height: 25,
+      width: 25,
+    );
   }
 }
 
@@ -76,6 +156,7 @@ class BarChartRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
+          // color: Colors.red,
           width: 160,
           child: SelectableText(
             num == 1
@@ -87,11 +168,12 @@ class BarChartRow extends StatelessWidget {
                         : num == 4
                             ? "Extraversion"
                             : "Open Mindedness",
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
           ),
         ),
         Container(
-          margin: EdgeInsets.fromLTRB(2, 0, 0, 0),
-          height: 70,
+          margin: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+          height: 60,
           width: 2,
           color: Colors.black,
         ),
@@ -100,12 +182,13 @@ class BarChartRow extends StatelessWidget {
           height: 30,
           width: scoreToBarLength(_value).toDouble(),
         ),
-        SizedBox(
-          width: 10,
+        const SizedBox(
+          width: 5,
         ),
-        SelectableText(
-          _value.toString(),
-          style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+        Container(
+          width: 15,
+          child: Text(_value.toString(),
+              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
         ),
         SizedBox(
           height: 30,
@@ -126,27 +209,27 @@ class BarChartCategories extends StatelessWidget {
     return Center(
       child: Container(
         height: 20,
-        width: 500,
+        width: 530,
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             SizedBox(
-              width: 165,
+              width: 175,
             ),
             SelectableText(
               "Low",
               style: TextStyle(color: Colors.grey),
             ),
             SizedBox(
-              width: 100,
+              width: 110,
             ),
             SelectableText(
               "Medium",
               style: TextStyle(color: Colors.grey),
             ),
             SizedBox(
-              width: 100,
+              width: 120,
             ),
             SelectableText(
               "High",
@@ -162,34 +245,34 @@ class BarChartCategories extends StatelessWidget {
 int scoreToBarLength(int score) {
   switch (score) {
     case 1:
-      return 50;
+      return 45;
       break;
     case 2:
-      return 100;
+      return 90;
       break;
     case 3:
-      return 150;
+      return 135;
       break;
     case 4:
-      return 200;
+      return 180;
       break;
     case 5:
-      return 250;
+      return 225;
       break;
     case 6:
-      return 300;
+      return 270;
       break;
     case 7:
-      return 350;
+      return 315;
       break;
     case 8:
-      return 400;
+      return 360;
       break;
     case 9:
-      return 450;
+      return 405;
       break;
     case 10:
-      return 500;
+      return 450;
       break;
     default:
       return 0;
@@ -199,7 +282,7 @@ int scoreToBarLength(int score) {
 Color? chooseColor(score) {
   if (score < 4)
     return Colors.red[200];
-  else if (score < 7)
+  else if (score < 8)
     return Colors.yellow[300];
   else
     return Colors.green[300];
