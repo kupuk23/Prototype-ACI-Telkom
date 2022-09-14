@@ -41,27 +41,21 @@ class _HomePageState extends State<HomePage> {
 
         return Scaffold(
           backgroundColor: Color.fromARGB(255, 243, 243, 243),
-          body: Column(
-            children: [
-              Expanded(
-                child: ScreenTypeLayout(
-                    desktop: HomeDesktop(
-                        titleSize: titleSize,
-                        textAlignment: textAlignment,
-                        descriptionSize: descriptionSize,
-                        formKey: formKey,
-                        textFormController: _textFormController,
-                        widget: widget),
-                    mobile: HomeMobile(
-                        titleSize: titleSize,
-                        textAlignment: textAlignment,
-                        descriptionSize: descriptionSize,
-                        formKey: formKey,
-                        textFormController: _textFormController,
-                        widget: widget)),
-              )
-            ],
-          ),
+          body: ScreenTypeLayout(
+              desktop: HomeDesktop(
+                  titleSize: titleSize,
+                  textAlignment: textAlignment,
+                  descriptionSize: descriptionSize,
+                  formKey: formKey,
+                  textFormController: _textFormController,
+                  widget: widget),
+              mobile: HomeMobile(
+                  titleSize: titleSize,
+                  textAlignment: textAlignment,
+                  descriptionSize: descriptionSize,
+                  formKey: formKey,
+                  textFormController: _textFormController,
+                  widget: widget)),
         );
       },
     );
