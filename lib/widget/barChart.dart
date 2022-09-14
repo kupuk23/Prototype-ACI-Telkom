@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:database_test/classes/myColor.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 
@@ -126,13 +127,12 @@ class BoxLegend extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(3),
-        color: _scoreLevel == 0
-            ? Colors.red
-            : _scoreLevel == 1
-                ? Colors.yellow
-                : Colors.green,
-      ),
+          borderRadius: BorderRadius.circular(3),
+          color: _scoreLevel == 0
+              ? MyColors.darkBlue
+              : _scoreLevel == 1
+                  ? MyColors.yellow
+                  : MyColors.green),
       height: 25,
       width: 25,
     );
@@ -281,9 +281,9 @@ int scoreToBarLength(int score) {
 
 Color? chooseColor(score) {
   if (score < 4)
-    return Colors.red[200];
+    return MyColors.darkBlue;
   else if (score < 8)
-    return Colors.yellow[300];
+    return MyColors.yellow;
   else
-    return Colors.green[300];
+    return MyColors.green;
 }

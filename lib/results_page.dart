@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_`constr`uctors, non_constant_identifier_names, prefer_const_constructors
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:database_test/classes/myColor.dart';
 import 'package:database_test/widget/barChart.dart';
 import 'package:database_test/widget/faset_charts.dart';
 import 'package:dotted_line/dotted_line.dart';
@@ -148,7 +149,26 @@ class _ResultsPageState extends State<ResultsPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Center(child: SelectableText('Name :  $name')),
+                          Center(
+                              child: SelectableText(
+                            'Name :  $name',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                            ),
+                          )),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Center(
+                            child: SelectableText(
+                              "Hasil Berdasarkan Faset",
+                              style: TextStyle(
+                                  color: MyColors.orange,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24),
+                            ),
+                          ),
                           FasetChart(fasetScore: stdScore),
                           SizedBox(
                             height: 60,
@@ -157,7 +177,9 @@ class _ResultsPageState extends State<ResultsPage> {
                             child: SelectableText(
                               "Hasil Berdasarkan Domain",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w600, fontSize: 20),
+                                  color: MyColors.orange,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24),
                             ),
                           ),
                           SizedBox(

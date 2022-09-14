@@ -1,3 +1,4 @@
+import 'package:database_test/classes/myColor.dart';
 import 'package:database_test/results_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class FasetChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color greenTheme = Color.fromARGB(255, 33, 217, 128);
+    Color fasetTitleColor = MyColors.yellow;
     return Column(children: [
       SizedBox(
         height: 40,
@@ -19,7 +21,7 @@ class FasetChart extends StatelessWidget {
       SelectableText(
         "AGREEABLENESS",
         style: TextStyle(
-            color: greenTheme, fontWeight: FontWeight.w800, fontSize: 18),
+            color: fasetTitleColor, fontWeight: FontWeight.w800, fontSize: 18),
       ),
       FacetTitle(index: 0),
       rowTable(
@@ -42,7 +44,7 @@ class FasetChart extends StatelessWidget {
       SelectableText(
         "Conscientiousness".toUpperCase(),
         style: TextStyle(
-            color: greenTheme, fontWeight: FontWeight.w800, fontSize: 18),
+            color: fasetTitleColor, fontWeight: FontWeight.w800, fontSize: 18),
       ),
       FacetTitle(index: 3),
       rowTable(
@@ -65,7 +67,7 @@ class FasetChart extends StatelessWidget {
       SelectableText(
         "Emotional Stability".toUpperCase(),
         style: TextStyle(
-            color: greenTheme, fontWeight: FontWeight.w800, fontSize: 18),
+            color: fasetTitleColor, fontWeight: FontWeight.w800, fontSize: 18),
       ),
       FacetTitle(index: 6),
       rowTable(
@@ -88,7 +90,7 @@ class FasetChart extends StatelessWidget {
       SelectableText(
         "Extraversion".toUpperCase(),
         style: TextStyle(
-            color: greenTheme, fontWeight: FontWeight.w800, fontSize: 18),
+            color: fasetTitleColor, fontWeight: FontWeight.w800, fontSize: 18),
       ),
       FacetTitle(index: 9),
       rowTable(
@@ -111,7 +113,7 @@ class FasetChart extends StatelessWidget {
       SelectableText(
         "Open Mindedness".toUpperCase(),
         style: TextStyle(
-            color: greenTheme, fontWeight: FontWeight.w800, fontSize: 18),
+            color: fasetTitleColor, fontWeight: FontWeight.w800, fontSize: 18),
       ),
       FacetTitle(index: 12),
       rowTable(
@@ -142,7 +144,7 @@ class rowTable extends StatelessWidget {
 
   final int _fasetScore;
   final int num;
-  final Color fasetColor = Color.fromARGB(255, 50, 241, 149);
+  final Color fasetColor = MyColors.yellow;
   String leftTitle = "";
   String rightTitle = "";
   getLeftTitle() {
