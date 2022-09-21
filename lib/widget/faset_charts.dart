@@ -147,103 +147,126 @@ class rowTable extends StatelessWidget {
   final Color fasetColor = MyColors.yellow;
   String leftTitle = "";
   String rightTitle = "";
-  getLeftTitle() {
+  String leftDesc = "";
+  String rightDesc = "";
+  getTitle() {
     switch (num) {
       case 1:
-        leftTitle = "Data $num";
+        leftTitle = "Egois";
+        leftDesc =
+            "Individu memiliki kepedulian yang rendah terhadap kesejahteraan orang lain.";
+        rightTitle = "Peduli";
+        rightDesc =
+            "Individu memiliki kepedulian tinggi terhadap kesejahteraan orang lain.";
         break;
       case 2:
-        leftTitle = "Data $num";
+        leftTitle = "Arogan";
+        leftDesc =
+            "Individu kurang dapat menghargai hak dan preferensi orang lain.";
+        rightTitle = "Rendah hati";
+        rightDesc = "Individu sangat menghargai hak dan preferensi orang lain.";
         break;
       case 3:
-        leftTitle = "Data $num";
+        leftTitle = "Skeptis";
+        leftDesc =
+            "Individu memiliki kesulitan untuk berpikir positif tentang orang lain dan cenderung tidak percaya pada orang lain.";
+        rightTitle = "Memercayai";
+        rightDesc =
+            "Individu cenderung berpikir positif tentang orang lain dan mudah percaya pada orang lain.";
         break;
       case 4:
-        leftTitle = "Data $num";
+        leftTitle = "Berantakan";
+        leftDesc =
+            "Individu memiliki apresiasi yang rendah terhadap keteraturan dan melakukan aktivitas secara acak.";
+        rightTitle = "Teratur";
+        rightDesc =
+            "Individu memiliki apresiasi yang tinggi terhadap keteraturan dan melakukan aktivitas secara sistematis.";
         break;
       case 5:
-        leftTitle = "Data $num";
+        leftTitle = "Inkonsisten";
+        leftDesc =
+            "Individu memiliki etos kerja yang kurang baik, melaksanakan tugas sesuai suasana hati sendiri, serta abai dengan tujuan.";
+        rightTitle = "Persisten";
+        rightDesc =
+            "Individu memiliki etos kerja yang sangat baik dan dapat melakukan aktivitas secara persisten untuk mewujudkan sebuah tujuan.";
         break;
       case 6:
-        leftTitle = "Data $num";
+        leftTitle = "Sulit diandalkan";
+        leftDesc =
+            "Individu memiliki komitmen yang rendah dalam menjalankan kewajiban dan perlu pemantauan dalam penyelesaian pekerjaan.";
+        rightTitle = "Bertanggung jawab";
+        rightDesc =
+            "Individu memiliki komitmen yang tinggi dalam menjalankan kewajiban dan dapat diandalkan untuk menyelesaikan pekerjaan secara mandiri.";
         break;
       case 7:
-        leftTitle = "Data $num";
+        leftTitle = "Pencemas";
+        leftDesc =
+            "Individu mudah merasa cemas atau terganggu tanpa sebab yang jelas.";
+        rightTitle = "Tenang";
+        rightDesc =
+            "Individu mampu bersikap tenang dan bertindak masuk akal dalam menghadapi berbagai situasi.";
         break;
       case 8:
-        leftTitle = "Data $num";
+        leftTitle = "Pesimis";
+        leftDesc =
+            "Individu memiliki minat yang rendah terhadap aktivitas sehari-hari, tidak bersemangat, dan bersikap pesimis.";
+        rightTitle = "Optimis";
+        rightDesc =
+            "Individu memiliki minat dan semangat yang tinggi dalam menjalani aktivitas sehari-hari dan mampu bersikap optimis.";
         break;
       case 9:
-        leftTitle = "Data $num";
+        leftTitle = "Temperamental";
+        leftDesc = "Individu kesulitan mengelola emosi dalam berbagai situasi.";
+        rightTitle = "Stabil";
+        rightDesc = "Individu mampu mengelola emosi dalam berbagai situasi. ";
         break;
       case 10:
-        leftTitle = "Data $num";
+        leftTitle = "Senang Menyendiri";
+        leftDesc =
+            "Individu memiliki minat yang rendah untuk terlibat dalam interaksi sosial. Ia juga kurang merasa nyaman berada dalam kegiatan yang melibatkan banyak orang.";
+        rightTitle = "Senang Bersosialisasi";
+        rightDesc =
+            "Individu memiliki minat yang tinggi terhadap interaksi sosial. Ia menikmati berbagai aktivitas yang melibatkan banyak orang.";
         break;
       case 11:
-        leftTitle = "Data $num";
+        leftTitle = "Sulit berpendapat";
+        leftDesc =
+            "Individu mengalami kesulitan mengemukakan pendapat saat berada dalam situasi sosial.";
+        rightTitle = "Asertif";
+        rightDesc =
+            "Individu dapat dengan mudah mengemukakan pendapat dalam berbagai situasi sosial.";
         break;
       case 12:
-        leftTitle = "Data $num";
+        leftTitle = "Apatis";
+        leftDesc =
+            "Individu kurang antusias dan tidak bersemangat dalam beragam aktivitas.";
+        rightTitle = "Antusias";
+        rightDesc =
+            "Individu menunjukkan antusiasme dan semangat yang tinggi dalam menjalankan beragam aktivitas.";
         break;
       case 13:
-        leftTitle = "Data $num";
+        leftTitle = "Keingintahuan rendah";
+        leftDesc =
+            "Individu memiliki rasa ingin tahu yang rendah, tidak termotivasi untuk mencari informasi lebih lanjut mengenai berbagai hal.";
+        rightTitle = "Keingintahuan tinggi";
+        rightDesc =
+            "Individu memiliki rasa ingin tahu yang tinggi. Ia bersikap kritis terhadap informasi yang diterima, dan termotivasi untuk mencari informasi lebih lanjut tentang hal tesebut.";
         break;
       case 14:
-        leftTitle = "Data $num";
+        leftTitle = "Praktikal";
+        leftDesc =
+            "Individu memiliki apresiasi yang rendah terhadap keindahan dan lebih mengutamakan keberfungsian.";
+        rightTitle = "Estetis";
+        rightDesc =
+            "Individu mampu mengapresiasi keindahan dan menjadikannya pertimbangan penting dalam kehidupan.";
         break;
       case 15:
-        leftTitle = "Data $num";
-        break;
-      default:
-    }
-  }
-
-  getRightTitle() {
-    switch (num) {
-      case 1:
-        rightTitle = "Data $num";
-        break;
-      case 2:
-        rightTitle = "Data $num";
-        break;
-      case 3:
-        rightTitle = "Data $num";
-        break;
-      case 4:
-        rightTitle = "Data $num";
-        break;
-      case 5:
-        rightTitle = "Data $num";
-        break;
-      case 6:
-        rightTitle = "Data $num";
-        break;
-      case 7:
-        rightTitle = "Data $num";
-        break;
-      case 8:
-        rightTitle = "Data $num";
-        break;
-      case 9:
-        rightTitle = "Data $num";
-        break;
-      case 10:
-        rightTitle = "Data $num";
-        break;
-      case 11:
-        rightTitle = "Data $num";
-        break;
-      case 12:
-        rightTitle = "Data $num";
-        break;
-      case 13:
-        rightTitle = "Data $num";
-        break;
-      case 14:
-        rightTitle = "Data $num";
-        break;
-      case 15:
-        rightTitle = "Data $num";
+        leftTitle = "Monoton";
+        leftDesc =
+            "Individu memiliki kreativitas yang rendah serta merasa nyaman dengan ide dan kondisi yang sudah ada.";
+        rightTitle = "Kreatif";
+        rightDesc =
+            "Individu memiliki kreativitas yang tinggi serta terbuka terhadap ide dan hal-hal baru.";
         break;
       default:
     }
@@ -251,8 +274,7 @@ class rowTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    getLeftTitle();
-    getRightTitle();
+    getTitle();
     int boxNum = 0;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -260,10 +282,16 @@ class rowTable extends StatelessWidget {
       children: [
         Tooltip(
             textStyle: TextStyle(fontSize: 13, color: Colors.white),
-            message: 'Left Data Details ',
-            child: SelectableText(leftTitle)),
+            message: leftDesc,
+            child: Container(
+                width: 90,
+                child: SelectableText(
+                  leftTitle,
+                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.center,
+                ))),
         SizedBox(
-          width: 20,
+          width: 10,
         ),
         BoxBar(fasetScore: _fasetScore, fasetColor: fasetColor, boxNum: 1),
         BoxBar(fasetScore: _fasetScore, fasetColor: fasetColor, boxNum: 2),
@@ -276,12 +304,18 @@ class rowTable extends StatelessWidget {
         BoxBar(fasetScore: _fasetScore, fasetColor: fasetColor, boxNum: 9),
         BoxBar(fasetScore: _fasetScore, fasetColor: fasetColor, boxNum: 10),
         SizedBox(
-          width: 20,
+          width: 10,
         ),
         Tooltip(
             textStyle: TextStyle(fontSize: 13, color: Colors.white),
-            message: "Right Data Details",
-            child: SelectableText(rightTitle)),
+            message: rightDesc,
+            child: Container(
+                width: 90,
+                child: SelectableText(
+                  rightTitle,
+                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.center,
+                ))),
       ],
     );
   }

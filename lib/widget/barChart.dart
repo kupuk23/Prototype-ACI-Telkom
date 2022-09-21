@@ -64,7 +64,7 @@ class BarChart extends StatelessWidget {
           Center(
             child: Container(
               height: 50,
-              width: 300,
+              width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(3),
                 //color: Color.fromARGB(50, 149, 149, 149),
@@ -92,7 +92,7 @@ class Legend extends StatelessWidget {
         SizedBox(
           width: 10,
         ),
-        Text("Low"),
+        Text("Rendah"),
         SizedBox(
           width: 30,
         ),
@@ -100,7 +100,7 @@ class Legend extends StatelessWidget {
         SizedBox(
           width: 10,
         ),
-        Text("Medium"),
+        Text("Sedang"),
         SizedBox(
           width: 30,
         ),
@@ -108,7 +108,7 @@ class Legend extends StatelessWidget {
         SizedBox(
           width: 10,
         ),
-        Text("High"),
+        Text("Tinggi"),
       ],
     );
   }
@@ -209,30 +209,30 @@ class BarChartCategories extends StatelessWidget {
     return Center(
       child: Container(
         height: 20,
-        width: 530,
+        width: 580,
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             SizedBox(
-              width: 175,
+              width: 180,
             ),
             SelectableText(
-              "Low",
+              "Rendah",
               style: TextStyle(color: Colors.grey),
             ),
             SizedBox(
-              width: 110,
+              width: 105,
             ),
             SelectableText(
-              "Medium",
+              "Sedang",
               style: TextStyle(color: Colors.grey),
             ),
             SizedBox(
               width: 120,
             ),
             SelectableText(
-              "High",
+              "Tinggi",
               style: TextStyle(color: Colors.grey),
             )
           ],

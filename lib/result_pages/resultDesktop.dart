@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:database_test/classes/myColor.dart';
 import 'package:database_test/results_page.dart';
@@ -52,7 +54,7 @@ class _ResultDesktopState extends State<ResultDesktop> {
             children: [
               Center(
                   child: SelectableText(
-                'Name :  ${widget.name}',
+                'Nama :  ${widget.name}',
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 18,
